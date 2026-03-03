@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem solving Life-style.</title>
+    <style>
+ 
+  </style>
+</head>
+<body>
+    <center>
+        <h1>Competitive Programming Tracker</h1>
+        <p><i>"Problem Solving is my middle name."</i></p>
+    </center>
+
+    <hr>
+
+    <h3>Daily Problem Goal (3/5)</h3>
+    <progress value="60" max="100"></progress>
+    <p><mark>Keep going!</mark> You are 2 problems away from your streak.</p>
+
+    <hr>
+
+    <font color="purple"><h2>Debug Console</h2></font>
+    <p>Last execution results:</p>
+    <samp>
+        Input: [5, 2, 9, 1, 5, 6]<br>
+        Output: [1, 2, 5, 5, 6, 9]<br>
+        Runtime: 0.002s
+    </samp>
+
+    <hr>
+    <font color="Blue"><h1> Your Daily Contest is Right here!</h1></font>
+        <form>
+        <label>Select Your Lucky Problem:</label>
+        <input list="questions" id="complexityInput">
+        <datalist id="questions">
+            <option value="Prefix Min & Suffix Max  (Data-structure)">
+            <option value="Simple Repition  (Number Theory)">
+            <option value="The strict teacher  (greedy,Math)">
+            <option value="Assembly via Remainders  (Number Theory)">
+            <option value="Tiles comeback  (Greedy)">
+        </datalist>
+    </form> 
+    <hr>
+    <br>
+
+    <table border="5">
+        <caption>Codeforces Friends Leaderboard</caption>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Handle</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Meto_coder</td>
+                <td>2500</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Aboo</td>
+                <td>900</td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>El-sheikha El-Noooob</td>
+                <td>67</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <font color="purple"><center><h2>Problem Timer</h2></center></font>
+    
+    <p>Time elapsed: <b id="timer">0</b> seconds</p>
+    <button onclick="startTimer()">Start Solving</button>
+    <button onclick="stopTimer()">Finish Problem</button>
+
+    <dialog id="statsModal">
+        <h2>Problem Submitted!</h2>
+        <p>You solved it in <span id="finalTime">0</span> seconds.</p>
+        <p>Verdict: <b>Accepted (AC)</b> 🍕</p>
+        <button onclick="document.getElementById('statsModal').close()">Close</button>
+    </dialog>
+
+    <hr>
+ 
+    <center>
+        <blockquote>
+            <font size="4.5" color="red">"The best way to learn is to solve problems that are 200 points above your rating."</font>
+        </blockquote>
+    </center>
+
+    <script>
+        var seconds = 0;
+        var interval;
+
+        function startTimer() {
+            clearInterval(interval);
+            seconds = 0;
+            interval = setInterval(function() {
+                seconds++;
+                document.getElementById('timer').innerText = seconds;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(interval);
+            document.getElementById('finalTime').innerText = seconds;
+            document.getElementById('statsModal').showModal();
+        }
+    </script>
+
+</body>
+</html>
